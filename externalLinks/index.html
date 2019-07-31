@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .btn-row {
+            display: flex; 
+            justify-content: center; 
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: lightcoral;
+            text-decoration: none;
+            padding: 5px;
+            border: 1px solid lightcoral;
+            width: 65px;
+            text-align: center;
+            margin-right: 5px;
+            float: left;
+            font-size: 20px;
+            transition: all 0.5s;
+        }
+
+        a:hover {
+            background: lightcoral;
+            color: white;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: none;
+        }
+
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            max-width: 450px;
+            transition: all 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(240, 128, 128, 0.9);
+        }
+
+        video {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            max-width: 650px;
+            transition: all 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+
+        video:hover {
+            box-shadow: 0 0 2px 1px rgba(240, 128, 128, 0.9);
+        }
+
+        .loader {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 45%;
+            top: 20%;
+        }
+
+        .loader:after {
+            content: " ";
+            display: block;
+            width: 150px;
+            height: 150px;
+            margin: 1px;
+            border-radius: 50%;
+            border: 5px solid lightcoral;
+            border-color: lightcoral transparent lightcoral transparent;
+            animation: loader 1.2s linear infinite;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class='btn-row'>
+        <a href="#" data-src="https://random.dog/woof.json">Dog</a>
+        <a href="#" data-src="https://aws.random.cat/meow">Cat</a>
+        <a href="#" data-src="request.php">Fox</a>
+    </div>
+    <div id="container"></div>
+<script src="script.js"></script>
+</body>
+
+</html>
